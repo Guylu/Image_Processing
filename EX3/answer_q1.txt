@@ -1,0 +1,11 @@
+What does it mean to multiply each level in a different value?
+What do we try to control on?
+
+Answer:
+
+When building a pyramid of an image, what we conceptually do it decompose it
+into band pass filters of different wavelengths.
+If we sum up all those band pass filters we get the original image,
+But if we sum them with different weights we can control the weights of different bands of the data -
+remember that each band is a "patch" of wavelengths, and so we can get some bands more
+expressed in the resulting image.

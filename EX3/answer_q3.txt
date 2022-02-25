@@ -1,0 +1,9 @@
+What happens (and why does this happen) to the result blending from section 4 image when:
+Blending is performed with a varying number of pyramid levels (max_levels = 1,2,3,4,5,...).
+
+Answer:
+
+the height is the pyramid effects the amount of band size filters we apply.
+If we have more band pass filters, we get a better localization in space for the lower
+frequencies in the image. And so our blending we take better "care" of them in
+the blending.

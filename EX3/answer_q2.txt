@@ -1,0 +1,8 @@
+What happens (and why does this happen) to the result blending from section 4 image when:
+Blending is performed with different image filters (filter_size_im = 1,3,5,7...).
+
+Answer:
+
+The filter_size_im decides the amount of blending done in each image in the gaussian pyramid.
+When blending the images together we get less/more interactive blending between the pyramif levels.
+and so this size determines the amount of blurring done that will be blended.
