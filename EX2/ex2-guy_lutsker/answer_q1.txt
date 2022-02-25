@@ -1,0 +1,14 @@
+Run change_rate and change_samples with the given WAV file aria_4kHz.wav and a ratio of 2. Listen to both change_rate.wav and change samples.wav. Can you explain the reason for the difference
+between the two? (Note: Students with hearing loss at high frequencies, please contact us in the private
+forum.)
+
+Answer:
+
+In the first case, where we run chagne_rate we only change the sample rate while
+the samples remain unchanged. thi causes the length of the data to be changed
+and so the result is a change in playing frequency.
+
+In the second case where we run change_samples we go ahead and change the
+frequencies of the samples themselves, we trim/pad the fourier transform of the
+ samples and the result is a shorter/longer data with different frequencies.
+ the idea is to make an analysis which does not change the pitch of the samples.

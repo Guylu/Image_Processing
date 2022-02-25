@@ -1,0 +1,11 @@
+Why did you get two different magnitude images?
+
+Answer:
+First of all the convolution we defined is just an approximation of the "real"
+continuous derivative, while the fourier derivative more closes resembles the
+"real" derivative. And so we can expect the twp methods to have differences.
+
+Second of all, most changes can probably be explained by the nature of the
+fourier derivative formula - the formula removes the mean and gives much higher
+"weight" to high frequencies, and so we would expect the fourier derivative to
+have more fine details than the convolution derivative.

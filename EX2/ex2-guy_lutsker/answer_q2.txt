@@ -1,0 +1,12 @@
+Record yourself using your smartphone (or any other recording device) and fast forward it using both
+resize_spectrogram and resize_vocoder. Generate two audio files from the new samples, and explain
+the differences.
+
+Answer:
+
+When runnign both functions on files with ration >1 the resulting files sound
+about the same. The more significant changes occur when ration<1.
+There resize_spectrogram struggles and has distortions in the sound - probably
+caused by the waves overlapping and cancelling each other out.
+resize_vocoder, does not have this issue because it has phase correction, and so
+ sounds better.
