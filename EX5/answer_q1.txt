@@ -1,0 +1,29 @@
+I chose these parameters:
+
+super_resolution_num_res_blocks = 10
+batch_size = 128
+steps_per_epoch = 150
+num_epochs = 18
+patch_size = 32
+num_channels = 64
+
+I chose a batch size of the maximum size which let the model train on more samples before calculating the
+gradient - and so in SGD it means that the gradient we will "walk" towards better represents
+the "right" direction we should walk toward from the central limit theorem - it will converge to the
+mean faster since it has more samples.
+
+I chose a patch size that is maximal since in this task I felt that the model would benefit greatly
+from a bigger perception field - to calculate the super resolution I felt it should consider its surrounding,
+and 32 by 32 seemed like a big enough patch size.
+
+In addition I chose steps per epoch at 150 since our calculation here is quite large and I thought the model
+would benefit from such a size of steps.
+
+I chose the maximal number of channels as well, since the corruption here could be quite complicated and I
+thought we should increase the hypothesis space as much as we an here - the task is not easy and so we should
+let it consider a large solution space.
+The same could be said of the number of res blocks I considered, I chose a relatively large number of them so
+we could consider a large hypothesis space - although not too large so that the model would go crazy - adding
+more res blocks should be done more cautiously since it increases the class much faster, and so I chose 10 res
+blocks.
+

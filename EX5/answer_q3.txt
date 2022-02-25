@@ -1,0 +1,7 @@
+We an see a clear pattern (at least in the deblurr model)in the MSE of each model per the num of res blocks,
+and it is that with higher res blocks the better result we get - meaning that the loss is smaller.
+In the deblurring model this is quite clear, and in the denoise it harder to see, but it is present.
+
+In addition when examining the pictures themselves we can see about the same as in the MSE graphs - the more
+blocks we added the better quality the pictures seemed. And as before it was harder to distinguish in the
+denoise and the last highest blocks were virtually indistinguishable.

@@ -1,0 +1,22 @@
+Quite frankly I simply tried ALOT of options here and the reasoning behind why I ended up with these
+parameters that I chose is in Q1.
+
+But initially, I started with with the default parameters you chose for us.
+They were fine.. But obviously this task could be better solved.
+I tried at looking for each parameter separately - I trained all of the options and looked at their MSE as
+well as a result of their super resolution of a couple of pics (the first 5 of the subset you provided)
+
+And so I chose the best parameters for each of them separately. Then I tried to play with them a little more to
+see how stable this configuration was ( because each parameter was chosen kind of independently of the other
+and so I wanted to see if there was a better solution). But I saw that it was relatively stable and so I
+stayed with the results I got.
+
+the final ones:
+
+super_resolution_num_res_blocks = 10 #@param {type:"slider", min:1, max:15, step:1}
+batch_size = 128 #@param {type:"slider", min:1, max:128, step:16}
+steps_per_epoch = 150 #@param {type:"slider", min:100, max:5000, step:100}
+num_epochs = 18 #@param {type:"slider", min:1, max:20, step:1}
+patch_size = 32 #@param {type:"slider", min:8, max:32, step:2}
+num_channels = 64 #@param {type:"slider", min:16, max:64, step:2}
+
