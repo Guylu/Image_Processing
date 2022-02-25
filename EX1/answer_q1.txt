@@ -1,0 +1,10 @@
+The quantization procedure needs an initial segment division of [0..255] to segments, z. If a division
+will have a gray level segment with no pixels, the procedure will crash (Q1: Why?)
+
+Answer:
+
+The formula for generating new q_i's takes into consideration the cumulative
+histogram from z_i to z_i+1 (it divides by thi term).
+And so if we were to have a patch of pixels with noe values in the section
+z_i -> z_i+1  we would get a division by 0 (OH NO!!) and to avoid this
+we generate an initialization of z which is supposed to overcome this issue :)
